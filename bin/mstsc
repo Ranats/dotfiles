@@ -1,0 +1,2 @@
+#!/bin/sh
+xfreerdp /u:somelab /p: /v:192.168.11.26 #/size:1920x1080
