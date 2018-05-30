@@ -1,0 +1,17 @@
+Config { font = "xft:Ricty-9:bold"
+       , bgColor = "black"
+       , fgColor = "grey"
+       , position = Top--Static { xpos = 0, ypos = 0, width = 1920, height = 15 }
+       , lowerOnStart = False
+       , commands = [ Run Network "eth0" ["-L","0","-H","32","--normal","green","--high","red"] 10
+                    , Run Network "eth1" ["-L","0","-H","32","--normal","green","--high","red"] 10
+                    , Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
+                    , Run Memory ["--template","Mem: <usedratio>%"] 10
+                    , Run Swap [] 10
+                    , Run Date "%Y-%m-%d %A %T" "date" 10
+                    , Run StdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader%}{%cpu% | %memory% | %date%"
+       }-- vim: ft=haskell
