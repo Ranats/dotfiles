@@ -10,3 +10,5 @@ ln -sf ~/dotfiles/.xmonad/xmonad.hs ~/.xmonad/xmonad.hs
 ln -sf ~/dotfiles/.xmonad/xmonad.o ~/.xmonad/xmonad.o
 ln -sf ~/dotfiles/.xmonad/xmonad-x86_64-linux ~/.xmonad/xmonad-x86_64-linux
 ln -sf ~/dotfiles/.xinitrc ~/.xinitrc
+ln -sf ~/dotfiles/bin/screenshot.sh ~/bin/screenshot.sh
+ln -sf ~/dotfiles/bin/screenshot_select.sh ~/bin/screenshot_select.sh

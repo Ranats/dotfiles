@@ -244,7 +244,7 @@ main = do
        -- Take a screenshot (whole window)
        , ("<Print>", spawn "screenshot.sh")
        -- Take a screenshot (selected area)
-       , ("S-<Print>", spawn "screenshot_select.sh")
+       , ("M1-<Print>", spawn "screenshot_select.sh")
        -- Launch ipython qtconsole
        , ("<XF86Calculator>", spawn "ipython qtconsole --matplotlib=inline")
        -- Toggle touchpad
