@@ -1,6 +1,6 @@
 " setting
 "文字コードをUFT-8に設定
-set fenc=utf-8
+set fileencodings=utf-8,euc-jp,sjis,cp932,iso-2022-jp
 " バックアップファイルを作らない
 set nobackup
 " スワップファイルを作らない
