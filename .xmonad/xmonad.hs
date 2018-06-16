@@ -29,6 +29,7 @@ import XMonad.Hooks.DynamicLog         -- for xmobar
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.ManageDocks        -- avoid xmobar area
 import XMonad.Hooks.ManageHelpers
+import XMonad.Hooks.SetWMName          -- for Java GUI App
 
 import XMonad.Layout
 import XMonad.Layout.DragPane          -- see only two window
@@ -55,7 +56,7 @@ import Graphics.X11.ExtraTypes.XF86
 -- local variables                                                          {{{
 -------------------------------------------------------------------------------
 
-myWorkspaces = ["1", "2", "3", "4", "5"]
+myWorkspaces = ["main", "main2", "sub", "deck", "mail", "media"]
 modm = mod4Mask
 
 -- Color Setting
@@ -273,10 +274,11 @@ myLayout = spacing gapwidth $ gaps [(U, gwU),(D, gwD),(L, gwL),(R, gwR)]
 -------------------------------------------------------------------------------
 
 myStartupHook = do
-        spawnOnce "gnome-settings-daemon"
+--        spawnOnce "gnome-settings-daemon"
         spawnOnce "nm-applet"
         spawnOnce "xscreensaver -no-splash"
-        spawnOnce "$HOME/.dropbox-dist/dropboxd"
+--        spawnOnce "$HOME/.dropbox-dist/dropboxd"
+        setWMName "LG3D"
         -- spawnOnce "bash $HOME/.fehbg"
         -- spawnOnce "compton -b --config $HOME/.config/compton/compton.conf"
 
