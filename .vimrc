@@ -62,3 +62,6 @@ set hlsearch
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 syntax on
+
+" シェルスクリプトのインデント
+let g:sh_indent_case_labels=1
