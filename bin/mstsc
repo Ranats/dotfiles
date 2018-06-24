@@ -1,2 +1,22 @@
-#!/bin/sh
-xfreerdp /u:somelab /p: /v:192.168.11.26 /sound:sys:alsa #/size:1920x1080
+#!/bin/bash
+SIZE="1280x720"
+HOST="192.168.11.26"
+USER="somelab"
+PASW=""
+
+while getopts u:p:v:s: OPT
+do
+  case $OPT in
+    u)
+      USER="${OPTARG}";;
+    p)
+      PASW="${OPTARG}";;
+    s)
+      SIZE="${OPTARG}";;
+    v)
+      HOST="${OPTARG}";;
+  esac
+done
+
+xfreerdp /u:$USER /p:$PASW /v:$HOST /sound:sys:alsa /size:$SIZE
+
