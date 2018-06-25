@@ -40,6 +40,20 @@ if [[ `uname -r` =~ ARCH$ ]]; then
   ln -sf ~/dotfiles/bin/run_urxvt ~/bin/run_urxvt
   ln -sf ~/dotfiles/.Xresources ~/.Xresources
   xrdb -merge ~/.Xresources
+ 
+# ranger: filemanager on console
+  yaourt -S ranger --noconfirm
+  ln -sf ~/dotfiles/bin/run_ranger ~/bin/run_ranger
+  ranger --copy-config=all
+  rm ~/.config/ranger/rc.conf
+  rm ~/.config/ranger/rifle.conf
+  rm ~/.config/ranger/scope.sh
+  ln -sf ~/dotfiles/.config/ranger/rc.conf ~/.config/ranger/rc.conf
+  ln -sf ~/dotfiles/.config/ranger/rifle.conf ~/.config/ranger/rifle.conf
+  ln -sf ~/dotfiles/.config/ranger/scope.sh ~/.cofig/ranger/scope.sh
+
+# dmenu: dynamic menu
+  yaourt -S dmenu --noconfirm
 
 else
   echo "You are not Arched!!!"

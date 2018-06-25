@@ -222,7 +222,7 @@ main = do
        -- Insert a transparent panel
        , ("M-S-t", spawn "python $HOME/Workspace/python/transparent.py")
        -- Launch file manager
-       , ("M-e", spawn "thunar")
+       , ("M-e", spawn "run_ranger")--"thunar")
        -- Launch web browser
        --, ("M-w", spawn "luakit")
        -- Launch dmenu for launching applicatiton
