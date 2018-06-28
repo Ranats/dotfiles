@@ -3,9 +3,9 @@
 ```
 # If your arch is Arch
 # install some application from AUR
-install.sh -S
+./install.sh -S
 
 # Or not
-install.sh
+./install.sh
 ```
 
