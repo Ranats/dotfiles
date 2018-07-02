@@ -24,6 +24,8 @@ if ["$FLG_S" = "TRUE"]; then
     yaourt -S ranger --noconfirm
   # dmenu: dynamic menu
     yaourt -S dmenu --noconfirm
+
+#    yaourt -S texlive-langjapanese texlive-most ghostscript evince poppler-data --noconfirm
   else
     echo "You are not Arched!!!"    
   fi
@@ -72,3 +74,6 @@ fi
   ln -sf ~/dotfiles/.config/ranger/rc.conf ~/.config/ranger/rc.conf
   ln -sf ~/dotfiles/.config/ranger/rifle.conf ~/.config/ranger/rifle.conf
   ln -sf ~/dotfiles/.config/ranger/scope.sh ~/.cofig/ranger/scope.sh
+
+# latexmk
+  ln -sf ~/dotfiles/.latexmkrc ~/.latexmkrc
